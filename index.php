@@ -7,10 +7,21 @@ Alcuni prodotti (es. antipulci) avranno la caratteristica che saranno disponibil
 Buon lavoro a tutte e a tutti! :laptop_parrot: -->
 
 <?php
-require_once __DIR__ . '/classes/Product.php';
+// ! Richiedo la classe Food, che a sua volta richiede 'Product'
+require_once __DIR__ . '/classes/Food.php';
 
+// § Instanza di 'Product'
 $guinzaglio = new Product('Guinzaglio', 'guinzaglio per cani di taglia media, fatto con materiali ecosostenibili', 10.00, 'accessori');
-
 var_dump($guinzaglio);
+
+// § Instanza di 'Food'
+$croccantini = new Food('Croccantini', 'fantastici croccantini per i nosti amici a 4 zampe', 2.50, '2022-06-12', 'Manzo, Pollo');
+var_dump($croccantini);
+
+// § Instanza di 'Food'
+$croccantini_vegani = new Food('Croccantini vegani', 'Croccantini di verdure per i nosti amici a 4 zampe', 4.50, '2022-12-12');
+// | Utilizzo di un metodo della classe 'Food'
+$croccantini_vegani->setIngredients('verdure miste');
+var_dump($croccantini_vegani);
 
 ?>

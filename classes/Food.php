@@ -1,4 +1,5 @@
 <?php
+// ! Richiedo la classe 'Product'
 require_once __DIR__ . '/Product.php';
 /**
  * Food
